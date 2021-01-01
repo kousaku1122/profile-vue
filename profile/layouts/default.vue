@@ -2,7 +2,6 @@
   <v-app>
     <v-card
         class="mx-auto overflow-hidden"
-        height="400"
         width="100%"
       >
       <Header @drawer="updateDrawer" />
@@ -13,6 +12,7 @@
             <nuxt />
           </v-container>
         </v-main>
+        <Footer />
       </v-card-text>
     </v-card>
   </v-app>
@@ -21,6 +21,8 @@
 <script>
 import Header from '@/components/header.vue';
 import Drawer from '@/components/drawer.vue';
+import Footer from '@/components/footer.vue';
+
 export default {
   data: () => ({
      drawer: false,
@@ -28,6 +30,7 @@ export default {
   components: {
     Header,
     Drawer,
+    Footer,
   },
   methods: {
       updateDrawer (value) {
