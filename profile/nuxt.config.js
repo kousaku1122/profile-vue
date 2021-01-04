@@ -33,6 +33,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+     'nuxt-fontawesome',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -61,6 +62,10 @@ export default {
         }
       }
     }
+  },
+
+  fontawesome: {
+    component: 'fa'
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
