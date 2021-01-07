@@ -25,7 +25,59 @@
                   dark
                   >HTML5</v-toolbar>
                   <v-card-text>
-                    <div class="text-body-1 pa-12">Hello world!</div>
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>2019.01</v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                          独学で学習開始
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>2020.08</v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                           社会人フットサルチームのWebページ作成
+                         </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>2020.09</v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                          インターンシップでアプリケーション作成</v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>2020.10</v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                          社会人フットサルチームの月会費アプリケーション作成
+                          </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title>2020.12</v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                          講義で映画レビューページ作成
+                          </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item two-line>
+                      <v-list-item-content>
+                        <v-list-item-title></v-list-item-title>
+                        <v-list-item-subtitle class="wrap-text">
+                          その他学習でページ作成
+                          </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+
                   </v-card-text>
                   <v-card-actions class="justify-end">
                     <v-btn
