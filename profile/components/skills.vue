@@ -8,6 +8,7 @@
         <Html />
         <Css />
         <Javascript />
+        <Vue />
       </v-row>
     </v-card>
   </v-container>
@@ -17,6 +18,7 @@
 import Html from '@/components/html.vue';
 import Css from '@/components/css.vue';
 import Javascript from '@/components/javascript.vue';
+import Vue from '@/components/vue.vue';
 
 export default {
   data () {
@@ -27,7 +29,8 @@ export default {
   components: {
     Html,
     Css,
-    Javascript
+    Javascript,
+    Vue,
   },
 }
 </script>
