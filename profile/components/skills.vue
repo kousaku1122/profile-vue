@@ -10,6 +10,7 @@
         <Javascript />
         <Vue />
         <Ruby />
+        <C />
       </v-row>
     </v-card>
   </v-container>
@@ -21,6 +22,7 @@ import Css from '@/components/css.vue';
 import Javascript from '@/components/javascript.vue';
 import Vue from '@/components/vue.vue';
 import Ruby from '@/components/ruby.vue';
+import C from '@/components/c.vue';
 
 export default {
   data () {
@@ -34,6 +36,7 @@ export default {
     Javascript,
     Vue,
     Ruby,
+    C,
   },
 }
 </script>
