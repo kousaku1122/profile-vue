@@ -7,7 +7,7 @@
         >
         <template v-slot:activator="{ on, attrs }">
           <v-img
-          :src="vue_image_src"
+          :src="ruby_image_src"
           v-bind="attrs"
           v-on="on"
           ></v-img>
@@ -17,24 +17,33 @@
             <v-toolbar
             color="primary"
             dark
-            >Vue</v-toolbar>
+            >Ruby</v-toolbar>
             <v-card-text>
               <v-list-item two-line>
                 <v-list-item-content>
-                  <v-list-item-title>2020.12</v-list-item-title>
+                  <v-list-item-title>2020.04</v-list-item-title>
                   <v-list-item-subtitle class="wrap-text">
-                    独学で学習開始
-                  </v-list-item-subtitle>
+                    <fa :icon="faGem" /> 独学で学習開始,フレームワーク(Rails)</v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
+
               <v-list-item two-line>
                 <v-list-item-content>
-                  <v-list-item-title>2020.01</v-list-item-title>
+                  <v-list-item-title>2020.08</v-list-item-title>
                   <v-list-item-subtitle class="wrap-text">
-                    Portfolio作成
+                    社会人フットサルチームのWebページ作成,フレームワーク(Rails)
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
+
+                <v-list-item two-line>
+                  <v-list-item-content>
+                    <v-list-item-title>2020.10</v-list-item-title>
+                    <v-list-item-subtitle class="wrap-text">
+                      社会人フットサルチームの月会費アプリケーション作成,フレームワーク(Rails)
+                    </v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
 
                 <v-list-item two-line>
                   <v-list-item-content>
@@ -56,7 +65,7 @@
           </template>
         </v-dialog>
         <v-divider></v-divider>
-        <p>Vue</p>
+        <p>Ruby</p>
       </v-card>
     </v-hover>
   </div>
@@ -67,7 +76,7 @@
   export default {
     data () {
       return {
-        vue_image_src: require("@/assets/image/vue.png"),
+        ruby_image_src: require("@/assets/image/ruby.png"),
       }
   }
 }
