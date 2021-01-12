@@ -8,24 +8,30 @@
     @input="$emit('input', $event)"
   >
     <v-list nav dense>
-      <v-list-item-group
-        v-model="group"
-        active-class="deep-purple--text text--accent-4"
-      >
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item>
-
-        <v-list-item>
+      <nuxt-link v-scroll-to="'#about'" to>
+        <v-list-item @click="drawerChange">
           <v-list-item-icon>
             <v-icon>mdi-account</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>Account</v-list-item-title>
+          <v-list-item-title>About </v-list-item-title>
         </v-list-item>
-      </v-list-item-group>
+      </nuxt-link>
+      <nuxt-link v-scroll-to="'#skills'" to>
+        <v-list-item @click="drawerChange">
+          <v-list-item-icon>
+            <v-icon>fas fa-code</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Skills</v-list-item-title>
+        </v-list-item>
+      </nuxt-link>
+      <nuxt-link v-scroll-to="'#works'" to>
+        <v-list-item @click="drawerChange">
+          <v-list-item-icon>
+            <v-icon>fas fa-paint-brush</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Works</v-list-item-title>
+        </v-list-item>
+      </nuxt-link>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -33,13 +39,13 @@
 <script>
 export default {
   props: {
-    value: {
-      type: Boolean,
-      default: false
-    }
+    value: false
   },
-  data: () => ({
-    group: null
-  })
+
+  methods: {
+    drawerChange() {
+      this.$emit("drawer", false);
+    }
+  }
 };
 </script>

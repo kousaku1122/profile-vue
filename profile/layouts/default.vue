@@ -1,11 +1,9 @@
 <template>
   <v-app>
-    <v-card
-        class="mx-auto overflow-hidden"
-        width="100%"
-      >
+    <v-card class="mx-auto overflow-hidden" width="100%">
       <Header @drawer="updateDrawer" />
-      <Drawer v-model="drawer"/>
+      <Drawer @drawer="updateDrawer" v-model="drawer" />
+
       <v-card-text>
         <v-main>
           <v-container>
@@ -19,23 +17,23 @@
 </template>
 
 <script>
-import Header from '@/components/header.vue';
-import Drawer from '@/components/drawer.vue';
-import Footer from '@/components/footer.vue';
+import Header from "@/components/header.vue";
+import Drawer from "@/components/drawer.vue";
+import Footer from "@/components/footer.vue";
 
 export default {
   data: () => ({
-     drawer: false,
+    drawer: false
   }),
   components: {
     Header,
     Drawer,
-    Footer,
+    Footer
   },
   methods: {
-      updateDrawer (value) {
-        this.drawer = value
-      }
+    updateDrawer(value) {
+      this.drawer = value;
     }
-}
+  }
+};
 </script>

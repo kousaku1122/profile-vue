@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid id="skills">
     <v-card>
       <div class="title pb-2 text-center">Skills</div>
       <v-divider inset dark></v-divider>
