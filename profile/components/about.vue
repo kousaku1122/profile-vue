@@ -3,7 +3,7 @@
     <v-row justify="space-around">
       <v-col cols="11" md="6">
         <v-card>
-          <div class="title pb-2">About</div>
+          <div class="title pb-2 text-center">About</div>
           <v-divider inset dark></v-divider>
           <v-img
             src="https://picsum.photos/510/300?random"

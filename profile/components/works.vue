@@ -3,7 +3,9 @@
     <v-card>
       <div class="title pb-2 text-center">Works</div>
       <v-divider inset dark></v-divider>
-      <div class="text-subtitle-1 text-center py-2"></div>
+      <div class="text-subtitle-1 text-center py-2">
+        リンクをクリックすることでページに飛びます
+      </div>
       <v-tabs fixed-tabs v-model="tab">
         <v-tab href="#tab-1"> AueluWeb </v-tab>
         <v-tab href="#tab-2"> AueluAccounting</v-tab>
@@ -16,7 +18,7 @@
               href="https://www.teamauelu.me/"
               min-width="100%"
               style="text-transform: none"
-              class="mb-2"
+              class="mt-3 mb-2"
             >
               <v-icon style="text-align: right;">mdi-lock</v-icon>
               https://www.teamauelu.me/
@@ -37,7 +39,7 @@
               href="https://aueluaccounting.herokuapp.com/"
               min-width="100%"
               style="text-transform: none"
-              class="mb-2"
+              class="mt-3 mb-2"
             >
               <v-icon style="text-align: right;">mdi-lock</v-icon>
               https://aueluaccounting.herokuapp.com/
