@@ -3,7 +3,9 @@
     <v-card>
       <div class="title pb-2 text-center">Skills</div>
       <v-divider inset dark></v-divider>
-      <div class="text-subtitle-1 text-center py-2">クリックで詳細確認できます</div>
+      <div class="text-subtitle-1 text-center py-2">
+        クリックで詳細確認できます
+      </div>
       <v-row justify="space-around">
         <Html />
         <Css />
@@ -19,20 +21,20 @@
 </template>
 
 <script>
-import Html from '@/components/html.vue';
-import Css from '@/components/css.vue';
-import Javascript from '@/components/javascript.vue';
-import Vue from '@/components/vue.vue';
-import Ruby from '@/components/ruby.vue';
-import C from '@/components/c.vue';
-import Java from '@/components/java.vue';
-import Excel from '@/components/excel.vue';
+import Html from "@/components/html.vue";
+import Css from "@/components/css.vue";
+import Javascript from "@/components/javascript.vue";
+import Vue from "@/components/vue.vue";
+import Ruby from "@/components/ruby.vue";
+import C from "@/components/c.vue";
+import Java from "@/components/java.vue";
+import Excel from "@/components/excel.vue";
 
 export default {
-  data () {
+  data() {
     return {
-      dialog: false,
-    }
+      dialog: false
+    };
   },
   components: {
     Html,
@@ -42,7 +44,7 @@ export default {
     Ruby,
     C,
     Java,
-    Excel,
-  },
-}
+    Excel
+  }
+};
 </script>
