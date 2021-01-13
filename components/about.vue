@@ -18,112 +18,14 @@
 
       <v-col cols="12" md="5">
         <v-card>
-          <v-list-item two-line>
+          <v-list-item two-line v-for="about in abouts" :key="about.date">
             <v-list-item-content>
-              <v-list-item-title>2018.04</v-list-item-title>
+              <v-list-item-title>{{ about.date }}</v-list-item-title>
               <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-cuttlefish</v-icon>
-                c#を講義で学習、プログラミングに興味を持つようになる</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2018.09</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-java</v-icon>
-                Javaを講義で学習</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.01</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-html5</v-icon>
-                <v-icon>fab fa-css3-alt</v-icon>
-                HTML、CSSを独学で習得</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.04</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fas fa-gem</v-icon>
-                Ruby、Ruby on Railsを独学で習得</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.08</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fas fa-gem</v-icon>
-                RubyでチームのWebページ作成、Bootstrapを習得</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.09</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-js</v-icon>
-                Javascriptをインターンで習得</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.10</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fas fa-gem</v-icon>
-                Rubyでチームの月会費管理アプリ作成</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.12~</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-vuejs</v-icon>Vueを学習中</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.12~</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-vuejs</v-icon> Joicul参加中</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.01</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fab fa-vuejs</v-icon>
-                ハッカソン参加予定</v-list-item-subtitle
-              >
-            </v-list-item-content>
-          </v-list-item>
-
-          <v-list-item two-line>
-            <v-list-item-content>
-              <v-list-item-title>2020.01</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                <v-icon>fas fa-file-excel</v-icon>
-                ExcelVBA講義で学習</v-list-item-subtitle
-              >
+                <v-icon>{{ about.icon }}</v-icon
+                ><v-icon>{{ about.icon2 }}</v-icon>
+                {{ about.contents }}
+              </v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-card>
@@ -136,6 +38,64 @@
 export default {
   data() {
     return {
+      abouts: [
+        {
+          date: "2018.04",
+          icon: "fab fa-cuttlefish",
+          contents: "c#を講義で学習、プログラミングに興味を持つようになる"
+        },
+        {
+          date: "2018.09",
+          icon: "fab fa-java",
+          contents: "Javaを講義で学習"
+        },
+        {
+          date: "2020.01",
+          icon: "fab fa-html5",
+          icon2: "fab fa-css3-alt",
+          contents: "HTML、CSSを独学で習得"
+        },
+        {
+          date: "2020.04",
+          icon: "fas fa-gem",
+          contents: "Ruby、Ruby on Railsを独学で習得"
+        },
+        {
+          date: "2020.08",
+          icon: "fas fa-gem",
+          contents: "RubyでチームのWebページ作成、Bootstrapを習得"
+        },
+        {
+          date: "2020.09",
+          icon: "fab fa-js",
+          contents: "Javascriptをインターンで習得"
+        },
+        {
+          date: "2020.10",
+          icon: "fas fa-gem",
+          contents: "Rubyでチームの月会費管理アプリ作成"
+        },
+        {
+          date: "2020.12~",
+          icon: "fab fa-vuejs",
+          contents: "Vueを学習中"
+        },
+        {
+          date: "2020.12~",
+          icon: "fab fa-vuejs",
+          contents: "Joicul参加中"
+        },
+        {
+          date: "2020.01",
+          icon: "fab fa-vuejs",
+          contents: "ハッカソン参加予定"
+        },
+        {
+          date: "2020.01",
+          icon: "fas fa-file-excel",
+          contents: "ExcelVBA講義で学習"
+        }
+      ],
       image_src: require("@/assets/image/logo.png")
     };
   }
