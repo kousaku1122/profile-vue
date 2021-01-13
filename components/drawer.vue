@@ -7,29 +7,13 @@
     right
     @input="$emit('input', $event)"
   >
-    <v-list nav dense>
-      <nuxt-link v-scroll-to="'#about'" to>
+    <v-list nav dense v-for="item in nav_items" :key="item.id">
+      <nuxt-link v-scroll-to="`#${item.id}`" to>
         <v-list-item @click="drawerChange">
           <v-list-item-icon>
-            <v-icon>mdi-account</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>About </v-list-item-title>
-        </v-list-item>
-      </nuxt-link>
-      <nuxt-link v-scroll-to="'#skills'" to>
-        <v-list-item @click="drawerChange">
-          <v-list-item-icon>
-            <v-icon>fas fa-code</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Skills</v-list-item-title>
-        </v-list-item>
-      </nuxt-link>
-      <nuxt-link v-scroll-to="'#works'" to>
-        <v-list-item @click="drawerChange">
-          <v-list-item-icon>
-            <v-icon>fas fa-paint-brush</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Works</v-list-item-title>
+          <v-list-item-title>{{ item.content }}</v-list-item-title>
         </v-list-item>
       </nuxt-link>
     </v-list>
@@ -40,6 +24,15 @@
 export default {
   props: {
     value: false
+  },
+  data() {
+    return {
+      nav_items: [
+        { id: "about", icon: "mdi-account", content: "About" },
+        { id: "skills", icon: "fas fa-code", content: "Skills" },
+        { id: "works", icon: "fas fa-paint-brush", content: "Works" }
+      ]
+    };
   },
 
   methods: {
