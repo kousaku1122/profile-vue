@@ -30,6 +30,10 @@
             >
               <AueluWeb />
             </v-container>
+            <div class="text-body-1 pl-8 py-5">
+              大阪府社会人フットサルチームのWebページになります．<br />大阪府社会人フットサルというキーワードでGoogle検索8位でヒット．友人との共同開発作品．<br />機能：選手，試合結果，練習予定表示機能，変更時のニュース追加機能<br />開発言語：HTML、CSS、Ruby、Ruby
+              on Rails、Javascript <br />使用技術：Amazon S3
+            </div>
           </v-card>
         </v-tab-item>
         <v-tab-item value="tab-2" eager>
@@ -51,6 +55,10 @@
             >
               <AueluAccounting />
             </v-container>
+            <div class="text-body-1 pl-8 py-5">
+              大阪府社会人フットサルチームの月会費管理アプリになります．<br />会計で直面した問題を解決すべく作成したアプリケーションです．<br />機能：背番号検索機能，支払い遅延色変更機能<br />開発言語：HTML、CSS、Ruby、Ruby
+              on Rails、Javascript <br />使用技術：Rspec
+            </div>
           </v-card>
         </v-tab-item>
       </v-tabs-items>

@@ -1,5 +1,7 @@
 <template>
-  <v-img :src="image_src" eager></v-img>
+  <v-container>
+    <v-img :src="image_src" eager></v-img>
+  </v-container>
 </template>
 
 <script>
