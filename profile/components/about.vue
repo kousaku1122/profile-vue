@@ -2,15 +2,12 @@
   <v-container fluid id="about">
     <v-row justify="space-around">
       <v-col cols="11" md="6">
-        <v-card>
-          <div class="title pb-2 text-center">About</div>
+        <v-card class="text-center">
+          <div class="title pb-2">About</div>
           <v-divider inset dark></v-divider>
-          <v-img
-            src="https://picsum.photos/510/300?random"
-            aspect-ratio="1.7"
-            rounded
-          >
-          </v-img>
+          <v-avatar size="250" class="my-10">
+            <v-img :src="image_src"></v-img>
+          </v-avatar>
           <div class="title mb-1">Koki Sakurai</div>
           <p>22年卒同志社大学理工学部インテリジェント情報工学科所属</p>
           <p>フットサル、サッカー、ツーリング、多趣味なエンジニア</p>
@@ -134,7 +131,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      image_src: require("@/assets/image/logo.png")
+    };
+  }
+};
 </script>
 
 <style>
