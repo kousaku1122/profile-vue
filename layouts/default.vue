@@ -10,8 +10,8 @@
             <nuxt />
           </v-container>
         </v-main>
-        <Footer />
       </v-card-text>
+      <Footer />
     </v-card>
   </v-app>
 </template>

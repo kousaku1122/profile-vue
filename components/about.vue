@@ -6,7 +6,7 @@
           <div class="title pb-2">About</div>
           <v-divider dark></v-divider>
           <v-avatar size="250" class="my-10">
-            <v-img :src="image_src"></v-img>
+            <img src="~/assets/image/logo.png" />
           </v-avatar>
           <div class="title mb-1">Koki Sakurai</div>
           <p>22年卒同志社大学理工学部インテリジェント情報工学科所属</p>
@@ -95,8 +95,7 @@ export default {
           icon: "fas fa-file-excel",
           contents: "ExcelVBA講義で学習"
         }
-      ],
-      image_src: require("@/assets/image/logo.png")
+      ]
     };
   }
 };
