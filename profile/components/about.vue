@@ -1,10 +1,10 @@
 <template>
   <v-container fluid id="about">
     <v-row justify="space-around">
-      <v-col cols="11" md="6">
+      <v-col cols="12" md="6">
         <v-card class="text-center">
           <div class="title pb-2">About</div>
-          <v-divider inset dark></v-divider>
+          <v-divider dark></v-divider>
           <v-avatar size="250" class="my-10">
             <v-img :src="image_src"></v-img>
           </v-avatar>
@@ -16,7 +16,7 @@
         </v-card>
       </v-col>
 
-      <v-col cols="11" md="5">
+      <v-col cols="12" md="5">
         <v-card>
           <v-list-item two-line>
             <v-list-item-content>
