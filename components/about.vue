@@ -18,7 +18,7 @@
 
       <v-col cols="12" md="5">
         <v-card>
-          <v-list-item two-line v-for="about in abouts" :key="about.date">
+          <v-list-item two-line v-for="about in abouts" :key="about.contents">
             <v-list-item-content>
               <v-list-item-title>{{ about.date }}</v-list-item-title>
               <v-list-item-subtitle class="wrap-text">
