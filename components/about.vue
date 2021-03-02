@@ -3,27 +3,27 @@
     <v-row justify="space-around">
       <v-col cols="12" md="6">
         <v-card class="text-center">
-          <div class="title pb-2">About</div>
-          <v-divider dark></v-divider>
+          <div class="title pb-2" v-text="title" />
+          <v-divider dark />
           <v-avatar size="250" class="my-10">
             <img src="~/assets/image/logo.png" />
           </v-avatar>
-          <div class="title mb-1">Koki Sakurai</div>
-          <p>22年卒同志社大学理工学部インテリジェント情報工学科所属</p>
-          <p class="pb-8">
-            フットサル、サッカー、ツーリング、多趣味なエンジニア
-          </p>
+
+          <div class="title mb-1" v-text="name" />
+          <p v-text="content" />
+          <p v-text="hobby" />
+          <p class="pb-8" v-text="rating"></p>
         </v-card>
       </v-col>
 
       <v-col cols="12" md="5">
         <v-card>
-          <v-list-item two-line v-for="about in abouts" :key="about.contents">
+          <v-list-item two-line v-for="(about, i) in abouts" :key="i">
             <v-list-item-content>
-              <v-list-item-title>{{ about.date }}</v-list-item-title>
+              <v-list-item-title v-text="about.date" />
               <v-list-item-subtitle class="wrap-text">
-                <v-icon>{{ about.icon }}</v-icon
-                ><v-icon>{{ about.icon2 }}</v-icon>
+                <v-icon v-text="about.icon" />
+                <v-icon v-text="about.icon2" />
                 {{ about.contents }}
               </v-list-item-subtitle>
             </v-list-item-content>
@@ -38,6 +38,11 @@
 export default {
   data() {
     return {
+      title: "About",
+      name: "Koki Sakurai",
+      content: "22年卒同志社大学理工学部インテリジェント情報工学科所属",
+      hobby: "フットサル、サッカー、ツーリング、多趣味なエンジニア",
+      rating: "AtcoderRating: 48",
       abouts: [
         {
           date: "2018.04",
@@ -81,19 +86,19 @@ export default {
           contents: "Vueを学習中"
         },
         {
-          date: "2020.12~",
-          icon: "fab fa-vuejs",
-          contents: "Joicul参加中"
-        },
-        {
-          date: "2020.01",
-          icon: "fab fa-vuejs",
-          contents: "ハッカソン参加予定"
-        },
-        {
           date: "2020.01",
           icon: "fas fa-file-excel",
           contents: "ExcelVBA講義で学習"
+        },
+        {
+          date: "2020.01",
+          icon: "fab fa-vuejs",
+          contents: "ハッカソン参加"
+        },
+        {
+          date: "2020.12~",
+          icon: "fab fa-vuejs",
+          contents: "Joicul参加中"
         }
       ]
     };
