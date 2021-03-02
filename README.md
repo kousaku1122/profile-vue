@@ -11,3 +11,4 @@ https://koki-sakurai.com/
 - Vue
 - Vuetify
 - Nuxt.js
+- Netlify
