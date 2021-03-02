@@ -3,7 +3,7 @@
     <v-card>
       <div class="title pb-2 text-center" v-text="title" />
 
-      <v-divider dark></v-divider>
+      <v-divider dark />
 
       <div class="text-subtitle-1 text-center py-2" v-text="description" />
       <v-tabs :value="tab" @change="tab = $event" show-arrows fixed-tabs>

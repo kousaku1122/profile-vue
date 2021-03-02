@@ -1,19 +1,19 @@
 <template>
   <div>
     <About />
-    <Skills />
+    <skill-list />
     <work-list />
   </div>
 </template>
 
 <script>
 import About from "@/components/about.vue";
-import Skills from "@/components/skills.vue";
+import SkillList from "@/components/skill/SkillList.vue";
 import WorkList from "@/components/work/WorkList.vue";
 export default {
   components: {
     About,
-    Skills,
+    SkillList,
     WorkList
   }
 };

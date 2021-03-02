@@ -10,14 +10,16 @@
       <v-hover v-slot="{ hover }">
         <v-card :elevation="hover ? 12 : 2">
           <v-img :src="`${skill.img}`" @click.stop="onClick(skill)"></v-img>
-          <v-divider></v-divider>
-          <p>{{ skill.name }}</p>
+          <v-divider />
+          <p v-text="skill.name" />
         </v-card>
       </v-hover>
     </v-col>
+
     <v-dialog width="500" v-model="dialog" v-if="currentName">
       <v-card>
-        <v-toolbar color="primary" dark>{{ currentName.name }}</v-toolbar>
+        <v-card-title class="purple darken-2" v-text="currentName.name" />
+
         <v-card-text>
           <v-list-item
             two-line
@@ -25,15 +27,13 @@
             :key="about.name"
           >
             <v-list-item-content>
-              <v-list-item-title>{{ about.date }}</v-list-item-title>
-              <v-list-item-subtitle class="wrap-text">
-                {{ about.content }}
-              </v-list-item-subtitle>
+              <v-list-item-title v-text="about.date" />
+              <v-list-item-subtitle class="wrap-text" v-text="about.content" />
             </v-list-item-content>
           </v-list-item>
         </v-card-text>
         <v-card-actions class="justify-end">
-          <v-btn @click="dialog = false">Close</v-btn>
+          <v-btn @click="dialog = false" v-text="closeBtn" />
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -46,6 +46,7 @@ export default {
     return {
       dialog: false,
       currentName: null,
+      closeBtn: "Close",
       skills: [
         {
           img: require("@/assets/image/html.png"),
@@ -140,8 +141,16 @@ export default {
               content: "独学で学習開始"
             },
             {
-              date: "2020.01",
+              date: "2021.01",
               content: "Portfolio作成"
+            },
+            {
+              date: "2021.01",
+              content: "ハッカソン参加、フロントエンド担当"
+            },
+            {
+              date: "2021.01~",
+              content: "Joiculでアプリケーション開発中"
             },
             {
               content: "その他学習でページ作成"
@@ -165,6 +174,10 @@ export default {
               date: "2020.10",
               content:
                 "社会人フットサルチームの月会費アプリケーション作成,フレームワーク(Rails)"
+            },
+            {
+              date: "2021.2",
+              content: "競技プログラミングをRubyで始める"
             },
             {
               content: "その他学習でページ作成"
